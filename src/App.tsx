@@ -2,6 +2,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero";
 import GoogleReviews from "./components/CallToAction/GoogleReviews";
 import CallToAction from "./components/CallToAction/CallToAction";
+import Karate from "./components/Karate/Karate";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <GoogleReviews />
       <CallToAction />
+      <Karate />
       {/* Main Content Placeholder */}
       <main>
         <div className="container mt-5 pt-5">
