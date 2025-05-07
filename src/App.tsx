@@ -1,6 +1,7 @@
 import Navigation from "./components/Navigation/Navigation";
 import Hero from "./components/Hero/Hero";
 import GoogleReviews from "./components/CallToAction/GoogleReviews";
+import CallToAction from "./components/CallToAction/CallToAction";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       {/* Hero Section Below Navbar */}
       <Hero />
       <GoogleReviews />
+      <CallToAction />
       {/* Main Content Placeholder */}
       <main>
         <div className="container mt-5 pt-5">
