@@ -1,0 +1,79 @@
+# Windsurf Global Rules for Muteki Kyokushin Website Development
+
+### 🔄 Project Awareness & Context
+- Always read `PLANNING.md` at the start of a new conversation to understand the project's architecture, goals, style, and constraints.
+- Check `TASK.md` before starting a new task. If the task isn't listed, add it with a brief description and today's date.
+- Use consistent naming conventions, file structure, and BEM methodology for CSS as described in `PLANNING.md`.
+- Maintain the red and black color scheme throughout the website for brand consistency.
+
+### 🧱 Code Structure & Modularity
+- Never create a file longer than 500 lines of code. If a file approaches this limit, refactor by splitting it into modules or components.
+- Organize code into clearly separated components and modules grouped by feature or responsibility.
+- Use clear, consistent imports and maintain a clean dependency structure.
+- Follow the defined directory structure for the project.
+
+### 📂 Directory Structure Guidelines
+- `/src` - Main source code
+  - `/assets` - Static assets like images, fonts, etc.
+  - `/components` - Reusable UI components
+  - `/layouts` - Page layout templates
+  - `/pages` - Individual page components
+  - `/styles` - CSS files (following BEM methodology)
+  - `/utils` - Utility functions
+
+### 🧪 Testing & Reliability
+- Test all responsive layouts across mobile, tablet, and desktop breakpoints.
+- Ensure all interactive elements are functional and properly tested.
+- Validate HTML, CSS, and JavaScript using appropriate validators.
+- Test all forms for validation and proper submission handling.
+
+### ✅ Task Completion
+- Mark completed tasks in `TASK.md` immediately after finishing them.
+- Add new sub-tasks or TODOs discovered during development to `TASK.md` under a "Discovered During Work" section.
+- Document any design decisions or changes made during implementation.
+
+### 📎 Style & Conventions
+- Follow BEM methodology for CSS class naming.
+- Use Bootstrap 5 components and utilities for layout and basic styling.
+- Customize Bootstrap with the project's color scheme (red and black).
+- Ensure the sticky navbar is properly implemented on all pages.
+- Write semantic HTML that is accessible and SEO-friendly.
+- Implement responsive images using appropriate techniques and formats.
+
+### 📍 GPT-4.1 Specific Guidelines
+- Follow instruction-oriented prompting for GPT-4.1 (be extremely specific in requests).
+- Use chain-of-thought prompting for complex tasks to encourage step-by-step reasoning.
+- For long context tasks put instructions at both the beginning and end of prompts.
+- Specify output format clearly for structured responses.
+- Break complex requests into sequential prompts rather than trying to accomplish everything at once.
+
+### 📚 Documentation & Explainability
+- Comment all JavaScript code following JSDoc conventions.
+- Add inline comments for complex CSS calculations or techniques.
+- Create comprehensive documentation for project setup and development workflow.
+- Update `README.md` when new features are added or setup steps are modified.
+
+### 🖼️ Content & Assets
+- Optimize all images for web use before inclusion.
+- Use appropriate alt text for all images.
+- Implement lazy loading for images and heavy content.
+- Follow accessibility guidelines (WCAG 2.1 AA) for all content.
+
+### 🚀 Build & Deployment
+- Configure Vite properly for development and production builds.
+- Set up proper Netlify deployment with build hooks and environment variables.
+- Implement caching strategies for static assets.
+- Use proper environment variable handling for different deployment environments.
+
+### 🧠 AI Behavior Rules
+- Never assume missing context - Ask questions if uncertain about requirements
+- Never hallucinate libraries or functions - only use documented Bootstrap and vanilla JS features
+- Always confirm file paths and component names exist before referencing them
+- Never delete or overwrite existing code unless explicitly instructed to or if part of a task from `TASK.md`
+- Provide reasoning for significant design or code structure decisions
+- When suggesting new features or improvements clearly mark them as suggestions and provide rationale
+
+### 🔄 Regular Check-ins
+- At the beginning of each development session review the current state of the project and outstanding tasks
+- At the end of each significant task summarize what was accomplished and what needs to be done next
+- Suggest Git commits for each significant change or feature added
