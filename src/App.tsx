@@ -1,11 +1,14 @@
 import Navigation from './components/Navigation/Navigation';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
     <>
       {/* Sticky Navigation Bar at the Top */}
       <Navigation />
-      {/* Main Content Below Navbar */}
+      {/* Hero Section Below Navbar */}
+      <Hero />
+      {/* Main Content Placeholder */}
       <main>
         <div className="container mt-5 pt-5">
           <h1>Welcome to Muteki Kyokushin</h1>
