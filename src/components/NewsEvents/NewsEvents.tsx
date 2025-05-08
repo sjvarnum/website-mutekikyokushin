@@ -106,9 +106,9 @@ const NewsEvents: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Carousel controls */}
+          {/* Carousel controls: Desktop (arrows at sides) */}
           <button
-            className="btn btn-outline-secondary position-absolute top-50 start-0 translate-middle-y ms-2"
+            className="btn btn-outline-secondary position-absolute top-50 start-0 translate-middle-y ms-2 d-none d-md-block"
             style={{ zIndex: 2 }}
             onClick={prev}
             aria-label="Previous featured event"
@@ -116,13 +116,30 @@ const NewsEvents: React.FC = () => {
             <FaChevronLeft />
           </button>
           <button
-            className="btn btn-outline-secondary position-absolute top-50 end-0 translate-middle-y me-2"
+            className="btn btn-outline-secondary position-absolute top-50 end-0 translate-middle-y me-2 d-none d-md-block"
             style={{ zIndex: 2 }}
             onClick={next}
             aria-label="Next featured event"
           >
             <FaChevronRight />
           </button>
+          {/* Carousel controls: Mobile (arrows below, centered) */}
+          <div className="d-flex justify-content-center align-items-center gap-3 mt-3 d-md-none">
+            <button
+              className="btn btn-outline-secondary"
+              onClick={prev}
+              aria-label="Previous featured event"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              className="btn btn-outline-secondary"
+              onClick={next}
+              aria-label="Next featured event"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
           {/* Dots */}
           <div className="d-flex justify-content-center mt-2">
             {featuredItems.map((_, idx) => (
