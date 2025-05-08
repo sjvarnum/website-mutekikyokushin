@@ -80,7 +80,7 @@ const NewsEvents: React.FC = () => {
   const next = () => setCurrent((prev) => (prev + 1) % featuredItems.length);
 
   return (
-    <section className="news-events-section bg-white py-5 border-bottom">
+    <section id="news" className="news-events-section bg-white py-5 border-bottom">
       <div className="container">
         <h2 className="fw-bold display-6 mb-3 text-center">News & Events</h2>
         <p className="text-center text-muted mb-4">
@@ -90,7 +90,10 @@ const NewsEvents: React.FC = () => {
         <div className="position-relative mb-5">
           <div className="row justify-content-center align-items-center">
             <div className="col-12 col-md-10 col-lg-8">
-              <div className="card flex-row flex-md-row flex-column align-items-center shadow-sm overflow-hidden">
+              {featuredItems[current].title.includes('Ring Wars') && (
+  <div id="ringwars" style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true"></div>
+)}
+<div className="card flex-row flex-md-row flex-column align-items-center shadow-sm overflow-hidden">
                 {/* Image placeholder */}
                 <div className="d-flex align-items-center justify-content-center bg-secondary bg-opacity-25" style={{ minWidth: 150, minHeight: 150, width: 180, height: 180 }}>
                   <span className="text-muted fw-semibold">Image Placeholder</span>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const KidsProgram: React.FC = () => (
-  <section className="kids-program-section bg-light py-5 border-bottom">
+  <section id="kids" className="kids-program-section bg-light py-5 border-bottom">
     <div className="container">
       <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
         {/* Left Column: Image Placeholder */}

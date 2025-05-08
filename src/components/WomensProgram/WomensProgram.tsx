@@ -1,7 +1,7 @@
 import React from "react";
 
 const WomensProgram: React.FC = () => (
-  <section className="womens-program-section bg-white py-5 border-bottom">
+  <section id="adults" className="womens-program-section bg-white py-5 border-bottom">
     <div className="container">
       <div className="row align-items-center g-5 flex-lg-row-reverse flex-column">
         {/* Right Column (desktop): Image Placeholder */}
