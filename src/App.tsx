@@ -9,22 +9,34 @@ import KidsProgram from "./components/KidsProgram/KidsProgram";
 import WomensProgram from "./components/WomensProgram/WomensProgram";
 import ContactForm from "./components/Contact/ContactForm";
 import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import KaratePage from "./pages/KaratePage";
 
 function App() {
   return (
-    <>
-      <Navigation />
-      <Hero />
-      <GoogleReviews />
-      <CallToAction />
-      <Karate />
-      <NewsEvents />
-      <RingWars />
-      <KidsProgram />
-      <WomensProgram />
-      <ContactForm />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navigation />
+              <Hero />
+              <GoogleReviews />
+              <CallToAction />
+              <Karate />
+              <NewsEvents />
+              <RingWars />
+              <KidsProgram />
+              <WomensProgram />
+              <ContactForm />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/karate" element={<KaratePage />} />
+      </Routes>
+    </Router>
   );
 }
 

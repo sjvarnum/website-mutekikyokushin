@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import karateImg from "../../assets/masutatsu-oyama.jpg";
 
 const Karate: React.FC = () => (
@@ -25,6 +26,9 @@ const Karate: React.FC = () => (
           <p>
             Led by Shihan Rene Cruz—former Knockdown Champion and internationally certified instructor—our dojo is directly connected to Japan, offering world-class instruction and opportunities to compete and grow. Whether you are a beginner or a seasoned athlete, you’ll find a place to challenge yourself and achieve your goals in a positive environment.
           </p>
+          <Link to="/karate" className="btn btn-solid-blue btn-lg">
+            Learn More About Kyokushin
+          </Link>
         </div>
       </div>
     </div>
