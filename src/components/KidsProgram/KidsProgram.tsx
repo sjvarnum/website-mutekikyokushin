@@ -25,7 +25,7 @@ const KidsProgram: React.FC = () => (
           <p>
             Led by experienced instructors, our program encourages respect, teamwork, and perseverance—skills that benefit children both on and off the mat. All levels welcome!
           </p>
-          <a href="#contact" className="btn btn-primary btn-lg mt-2 shadow">
+          <a href="#contact" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
             Learn More / Enroll
           </a>
         </div>

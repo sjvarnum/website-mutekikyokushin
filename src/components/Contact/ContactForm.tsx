@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
                 {errors.message && <div className="invalid-feedback">{errors.message}</div>}
               </div>
               <div className="d-grid">
-                <button type="submit" className="btn btn-primary btn-lg">
+                <button type="submit" className="btn theme-bg-blue btn-lg text-light">
                   Send Message
                 </button>
               </div>

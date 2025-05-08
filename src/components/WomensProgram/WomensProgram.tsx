@@ -25,8 +25,8 @@ const WomensProgram: React.FC = () => (
           <p>
             Classes are led by experienced instructors who understand the unique goals and challenges women face. Join a community that celebrates achievement, fosters resilience, and encourages lifelong fitness.
           </p>
-          <a href="#contact" className="btn btn-primary btn-lg mt-2 shadow">
-            Learn More / Join Us
+          <a href="#contact" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
+            Learn More / Join Us  
           </a>
         </div>
       </div>
