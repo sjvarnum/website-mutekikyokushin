@@ -7,13 +7,12 @@ import NewsEvents from "./components/NewsEvents/NewsEvents";
 import KidsProgram from "./components/KidsProgram/KidsProgram";
 import WomensProgram from "./components/WomensProgram/WomensProgram";
 import ContactForm from "./components/Contact/ContactForm";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <>
-      {/* Sticky Navigation Bar at the Top */}
       <Navigation />
-      {/* Hero Section Below Navbar */}
       <Hero />
       <GoogleReviews />
       <CallToAction />
@@ -22,15 +21,7 @@ function App() {
       <KidsProgram />
       <WomensProgram />
       <ContactForm />
-      {/* Main Content Placeholder */}
-      <main>
-        <div className="container mt-5 pt-5">
-          <h1>Welcome to Muteki Kyokushin</h1>
-          <p>
-            This is the starter template. Begin building your sections here!
-          </p>
-        </div>
-      </main>
+      <Footer />
     </>
   );
 }
