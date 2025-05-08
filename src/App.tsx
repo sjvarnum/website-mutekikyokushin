@@ -6,6 +6,7 @@ import Karate from "./components/Karate/Karate";
 import NewsEvents from "./components/NewsEvents/NewsEvents";
 import KidsProgram from "./components/KidsProgram/KidsProgram";
 import WomensProgram from "./components/WomensProgram/WomensProgram";
+import ContactForm from "./components/Contact/ContactForm";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <NewsEvents />
       <KidsProgram />
       <WomensProgram />
+      <ContactForm />
       {/* Main Content Placeholder */}
       <main>
         <div className="container mt-5 pt-5">
