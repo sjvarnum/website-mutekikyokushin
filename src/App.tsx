@@ -5,6 +5,7 @@ import CallToAction from "./components/CallToAction/CallToAction";
 import Karate from "./components/Karate/Karate";
 import NewsEvents from "./components/NewsEvents/NewsEvents";
 import KidsProgram from "./components/KidsProgram/KidsProgram";
+import WomensProgram from "./components/WomensProgram/WomensProgram";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Karate />
       <NewsEvents />
       <KidsProgram />
+      <WomensProgram />
       {/* Main Content Placeholder */}
       <main>
         <div className="container mt-5 pt-5">
