@@ -90,9 +90,7 @@ const NewsEvents: React.FC = () => {
         <div className="position-relative mb-5">
           <div className="row justify-content-center align-items-center">
             <div className="col-12 col-md-10 col-lg-8">
-              {featuredItems[current].title.includes('Ring Wars') && (
-  <div id="ringwars" style={{ position: 'absolute', top: '-80px', left: 0, width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true"></div>
-)}
+              
 <div className="card flex-row flex-md-row flex-column align-items-center shadow-sm overflow-hidden">
                 {/* Image placeholder */}
                 <div className="d-flex align-items-center justify-content-center bg-secondary bg-opacity-25" style={{ minWidth: 150, minHeight: 150, width: 180, height: 180 }}>
