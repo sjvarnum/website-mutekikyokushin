@@ -1,4 +1,5 @@
 import React from "react";
+import heroImg from "../../assets/hero.jpg";
 
 const Hero: React.FC = () => (
   <section
@@ -17,14 +18,13 @@ const Hero: React.FC = () => (
         </div>
         {/* Right Column: Image Placeholder */}
         <div className="col-lg-6 col-12 text-center">
-          <div
-            className="hero-image-placeholder bg-secondary bg-opacity-25 rounded"
-            style={{ width: "100%", height: "300px", maxWidth: 400, margin: "0 auto" }}
-          >
-            <span className="d-flex h-100 justify-content-center align-items-center text-muted fw-semibold">
-              Image Placeholder
-            </span>
-          </div>
+          <img
+            src={heroImg}
+            alt="Kyokushin karate demonstration at Muteki Kyokushin dojo"
+            className="img-fluid rounded hero-image"
+            style={{ width: "100%", height: "300px", maxWidth: 400, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

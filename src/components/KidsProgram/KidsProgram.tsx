@@ -1,4 +1,5 @@
 import React from "react";
+import kidsImg from "../../assets/kids.jpg";
 
 const KidsProgram: React.FC = () => (
   <section id="kids" className="kids-program-section bg-light py-5 border-bottom">
@@ -6,14 +7,13 @@ const KidsProgram: React.FC = () => (
       <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
         {/* Left Column: Image Placeholder */}
         <div className="col-lg-6 col-12 text-center">
-          <div
-            className="kids-image-placeholder bg-secondary bg-opacity-25 rounded mb-4 mb-lg-0"
-            style={{ width: "100%", height: "300px", maxWidth: 400, margin: "0 auto" }}
-          >
-            <span className="d-flex h-100 justify-content-center align-items-center text-muted fw-semibold">
-              Kids Program Image
-            </span>
-          </div>
+          <img
+            src={kidsImg}
+            alt="Kids practicing karate at Muteki Kyokushin dojo"
+            className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+            style={{ width: "100%", height: "300px", maxWidth: 400, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
         </div>
         {/* Right Column: Content */}
         <div className="col-lg-6 col-12">

@@ -1,8 +1,18 @@
 import React from "react";
+import ringwarsImg from "../../assets/ringwars.jpg";
 
 const RingWars: React.FC = () => (
   <section id="ringwars" className="ringwars-section bg-light py-5 border-bottom">
     <div className="container">
+      <div className="text-center mb-4">
+        <img
+          src={ringwarsImg}
+          alt="Ring Wars tournament action at Muteki Kyokushin"
+          className="img-fluid rounded ringwars-section__image"
+          style={{ maxHeight: 300, objectFit: "cover", margin: "0 auto" }}
+          loading="lazy"
+        />
+      </div>
       <h2 className="fw-bold display-6 mb-3 text-center ringwars-section__title">Ring Wars Tournament</h2>
       <p className="lead text-center mb-4 ringwars-section__subtitle">
         Join us for the annual Muteki Kyokushin Ring Wars! An exciting full-contact tournament open to all ages and skill levels. Experience the spirit of Kyokushin in a supportive, competitive environment.
