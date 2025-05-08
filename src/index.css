@@ -10,6 +10,28 @@ body {
 /* Optionally, set a default font-family if you want to override Bootstrap's default */
 :root {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  /* Theme Colors */
+  --color-blue: #1d3251;
+  --color-blue-accent: #223c65;
+  --color-red: #ca1215;
+  --color-red-accent: #a30e12;
+  --color-black: #111;
+  --color-white: #fff;
+  --color-light: #f8f9fa;
 }
+
+/* Utility classes for theme colors (can be extended for BEM as needed) */
+.theme-bg-blue { background-color: var(--color-blue) !important; }
+.theme-bg-red { background-color: var(--color-red) !important; }
+.theme-bg-black { background-color: var(--color-black) !important; }
+.theme-bg-light { background-color: var(--color-light) !important; }
+.theme-bg-white { background-color: var(--color-white) !important; }
+
+.theme-text-blue { color: var(--color-blue) !important; }
+.theme-text-red { color: var(--color-red) !important; }
+.theme-text-black { color: var(--color-black) !important; }
+.theme-text-light { color: var(--color-light) !important; }
+.theme-text-white { color: var(--color-white) !important; }
+
 
 /* Add any accessibility or utility tweaks below as needed */
