@@ -3,7 +3,7 @@ import heroImg from "../../assets/hero.jpg";
 
 const Hero: React.FC = () => (
   <section
-    className="hero-section bg-light text-dark d-flex align-items-center"
+    className="hero-section bg-dark text-light d-flex align-items-center"
     style={{ minHeight: "75vh" }}
   >
     <div className="container">
@@ -22,7 +22,7 @@ const Hero: React.FC = () => (
             src={heroImg}
             alt="Kyokushin karate demonstration at Muteki Kyokushin dojo"
             className="img-fluid rounded hero-image"
-            style={{ width: "100%", height: "300px", maxWidth: 400, objectFit: "cover", margin: "0 auto" }}
+            style={{ width: "100%", height: "500px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
             loading="lazy"
           />
         </div>
