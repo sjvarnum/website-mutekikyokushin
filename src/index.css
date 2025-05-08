@@ -21,6 +21,81 @@ body {
 }
 
 /* Utility classes for theme colors (can be extended for BEM as needed) */
+
+/* Custom Solid Button Styles */
+.btn-solid-blue {
+  background: var(--color-blue) !important;
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-blue) !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-solid-blue:hover, .btn-solid-blue:focus {
+  background: var(--color-blue-accent) !important;
+  border-color: var(--color-blue-accent) !important;
+  color: var(--color-white) !important;
+}
+
+.btn-solid-red {
+  background: var(--color-red) !important;
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-red) !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-solid-red:hover, .btn-solid-red:focus {
+  background: var(--color-red-accent) !important;
+  border-color: var(--color-red-accent) !important;
+  color: var(--color-white) !important;
+}
+
+.btn-solid-black {
+  background: var(--color-black) !important;
+  color: var(--color-white) !important;
+  border: 2px solid var(--color-black) !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-solid-black:hover, .btn-solid-black:focus {
+  background: #222 !important;
+  border-color: #222 !important;
+  color: var(--color-white) !important;
+}
+
+/* Custom Outline Button Styles */
+.btn-outline-blue {
+  color: var(--color-blue) !important;
+  border: 2px solid var(--color-blue) !important;
+  background: transparent !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-outline-blue:hover, .btn-outline-blue:focus {
+  background: var(--color-blue) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-blue) !important;
+}
+
+.btn-outline-red {
+  color: var(--color-red) !important;
+  border: 2px solid var(--color-red) !important;
+  background: transparent !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-outline-red:hover, .btn-outline-red:focus {
+  background: var(--color-red) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-red) !important;
+}
+
+.btn-outline-black {
+  color: var(--color-black) !important;
+  border: 2px solid var(--color-black) !important;
+  background: transparent !important;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-outline-black:hover, .btn-outline-black:focus {
+  background: var(--color-black) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-black) !important;
+}
+
 .theme-bg-blue { background-color: var(--color-blue) !important; }
 .theme-bg-red { background-color: var(--color-red) !important; }
 .theme-bg-black { background-color: var(--color-black) !important; }

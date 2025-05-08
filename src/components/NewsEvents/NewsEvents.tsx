@@ -100,7 +100,7 @@ const NewsEvents: React.FC = () => {
                   <h5 className="card-title fw-bold">{featuredItems[current].title}</h5>
                   <div className="small text-muted mb-2">{new Date(featuredItems[current].date).toLocaleDateString()}</div>
                   <p className="card-text mb-2">{featuredItems[current].description}</p>
-                  <a href={featuredItems[current].link} className="btn btn-primary btn-sm">
+                  <a href={featuredItems[current].link} className="btn btn-solid-blue btn-sm">
                     Read More
                   </a>
                 </div>
@@ -109,7 +109,7 @@ const NewsEvents: React.FC = () => {
           </div>
           {/* Carousel controls: Desktop (arrows at sides) */}
           <button
-            className="btn btn-outline-secondary position-absolute top-50 start-0 translate-middle-y ms-2 d-none d-md-block"
+            className="btn btn-outline-blue position-absolute top-50 start-0 translate-middle-y ms-2 d-none d-md-block"
             style={{ zIndex: 2 }}
             onClick={prev}
             aria-label="Previous featured event"
@@ -117,7 +117,7 @@ const NewsEvents: React.FC = () => {
             <FaChevronLeft />
           </button>
           <button
-            className="btn btn-outline-secondary position-absolute top-50 end-0 translate-middle-y me-2 d-none d-md-block"
+            className="btn btn-outline-blue position-absolute top-50 end-0 translate-middle-y me-2 d-none d-md-block"
             style={{ zIndex: 2 }}
             onClick={next}
             aria-label="Next featured event"
@@ -127,14 +127,14 @@ const NewsEvents: React.FC = () => {
           {/* Carousel controls: Mobile (arrows below, centered) */}
           <div className="d-flex justify-content-center align-items-center gap-3 mt-3 d-md-none">
             <button
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-blue"
               onClick={prev}
               aria-label="Previous featured event"
             >
               <FaChevronLeft />
             </button>
             <button
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-blue"
               onClick={next}
               aria-label="Next featured event"
             >
@@ -147,7 +147,7 @@ const NewsEvents: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => goTo(idx)}
-                className={`mx-1 btn btn-sm rounded-circle ${idx === current ? "btn-primary" : "btn-outline-secondary"}`}
+                className={`mx-1 btn btn-sm rounded-circle ${idx === current ? "btn-primary" : "btn-outline-blue"}`}
                 style={{ width: 12, height: 12, padding: 0 }}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -166,7 +166,7 @@ const NewsEvents: React.FC = () => {
                   <h5 className="card-title fw-bold">{item.title}</h5>
                   <div className="small text-muted mb-2">{new Date(item.date).toLocaleDateString()}</div>
                   <p className="card-text mb-2">{item.description}</p>
-                  <a href={item.link} className="btn btn-outline-primary btn-sm mt-auto align-self-start">
+                  <a href={item.link} className="btn btn-outline-blue btn-sm mt-auto align-self-start">
                     Read More
                   </a>
                 </div>
@@ -176,7 +176,7 @@ const NewsEvents: React.FC = () => {
         </div>
         {/* View All Button */}
         <div className="text-center mt-4">
-          <a href="#" className="btn btn-secondary btn-lg">
+          <a href="#" className="btn btn-solid-blue btn-lg">
             View All News & Events
           </a>
         </div>
