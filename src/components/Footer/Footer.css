@@ -1,7 +1,7 @@
 .footer {
   background: #510a0a; /* Brand dark red */
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .footer__logo {
   max-width: 140px;
@@ -29,9 +29,9 @@
   color: #e63946; /* Accent red */
 }
 @media (max-width: 767.98px) {
-  .footer {
+  /* .footer {
     text-align: center;
-  }
+  } */
   .footer__section {
     margin-bottom: 1.5rem;
   }

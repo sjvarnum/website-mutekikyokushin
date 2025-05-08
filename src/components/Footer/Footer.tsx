@@ -19,10 +19,10 @@ const Footer: React.FC = () => (
           />
         </div>
         {/* Contact Info */}
-        <div className="col-12 col-md-3 text-center text-md-start mb-3 mb-md-0">
+        <div className="col-12 col-md-3 text-md-start mb-3 mb-md-0">
           <div className="footer__section">
             <div className="fw-bold mb-1">Phone:</div>
-            <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+            <div className="d-flex align-items-center justify-content-md-start gap-2 mb-2">
               <span>1-585-305-6003</span>
               <a href="viber://add?number=15853056003" aria-label="Viber" className="footer__icon-link"><FaViber color="#7360F2" size={20} /></a>
               <a href="https://wa.me/15853056003" aria-label="WhatsApp" className="footer__icon-link"><FaWhatsapp color="#25D366" size={20} /></a>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
           </div>
         </div>
         {/* Address */}
-        <div className="col-12 col-md-3 text-center text-md-start mb-3 mb-md-0">
+        <div className="col-12 col-md-3 text-md-start mb-3 mb-md-0">
           <div className="footer__section">
             <div className="fw-bold mb-1">Address:</div>
             <div>
@@ -46,10 +46,10 @@ const Footer: React.FC = () => (
           </div>
         </div>
         {/* Social */}
-        <div className="col-12 col-md-3 text-center text-md-start">
+        <div className="col-12 col-md-3 text-md-start">
           <div className="footer__section">
-            <div className="fw-bold mb-1">Follow us:</div>
-            <div className="d-flex justify-content-center justify-content-md-start gap-3">
+            <div className="fw-bold mb-3">Follow us:</div>
+            <div className="d-flex justify-content-md-start gap-3">
               <a href="https://facebook.com/MutekiKyokushin" aria-label="Facebook" className="footer__icon-link" target="_blank" rel="noopener noreferrer"><FaFacebookF color="#4267B2" size={28} /></a>
               <a href="https://instagram.com/MutekiKyokushin" aria-label="Instagram" className="footer__icon-link" target="_blank" rel="noopener noreferrer"><FaInstagram color="#0095F6" size={28} /></a>
               <a href="https://twitter.com/MutekiKyokushin" aria-label="Twitter" className="footer__icon-link" target="_blank" rel="noopener noreferrer"><FaTwitter color="#E4405F" size={28} /></a>
