@@ -9,7 +9,7 @@ const CallToAction: React.FC = () => (
           <p className="lead mb-4">
             Join our community and experience the benefits of martial arts training—confidence, discipline, and lifelong friendships. Get in touch today to start your first class!
           </p>
-          <a href="#contact" className="btn btn-primary btn-lg shadow">
+          <a href="#contact" className="btn theme-bg-blue btn-lg shadow text-light">
             Contact Us
           </a>
         </div>

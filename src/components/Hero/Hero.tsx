@@ -3,7 +3,7 @@ import heroImg from "../../assets/hero.jpg";
 
 const Hero: React.FC = () => (
   <section
-    className="hero-section bg-dark text-light d-flex align-items-center"
+    className="hero-section theme-bg-blue text-light d-flex align-items-center"
     style={{ minHeight: "75vh" }}
   >
     <div className="container">
