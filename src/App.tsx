@@ -13,10 +13,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import KaratePage from "./pages/KaratePage";
 import KidsKaratePage from "./pages/KidsKaratePage";
 import WomensKaratePage from "./pages/WomensKaratePage";
+import ScrollToAnchor from "./components/ScrollToAnchor";
 
 function App() {
   return (
     <Router>
+      <ScrollToAnchor />
       <Routes>
         <Route
           path="/"

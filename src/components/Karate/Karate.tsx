@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import karateImg from "../../assets/masutatsu-oyama.jpg";
 
 const Karate: React.FC = () => (
-  <section className="about-kyokushin-section bg-light py-5 border-bottom">
+  <section id="karate" className="about-kyokushin-section bg-light py-5 border-bottom">
     <div className="container">
       <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
         {/* Left Column: Image Placeholder */}
