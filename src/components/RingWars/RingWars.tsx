@@ -9,7 +9,7 @@ const RingWars: React.FC = () => (
           src={ringwarsImg}
           alt="Ring Wars tournament action at Muteki Kyokushin"
           className="img-fluid rounded ringwars-section__image"
-          style={{ maxHeight: 300, objectFit: "cover", margin: "0 auto" }}
+          style={{ maxHeight: 500, objectFit: "cover", margin: "0 auto" }}
           loading="lazy"
         />
       </div>

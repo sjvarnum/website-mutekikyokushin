@@ -11,7 +11,7 @@ const WomensProgram: React.FC = () => (
             src={womenImg}
             alt="Women practicing karate at Muteki Kyokushin dojo"
             className="img-fluid rounded mb-4 mb-lg-0 womens-image"
-            style={{ width: "100%", height: "300px", maxWidth: 400, objectFit: "cover", margin: "0 auto" }}
+            style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
             loading="lazy"
           />
         </div>
