@@ -14,12 +14,15 @@ const RingWars: React.FC = () => (
         />
       </div>
       <h2 className="fw-bold display-6 mb-3 text-center ringwars-section__title">Ring Wars Tournament</h2>
-      <p className="lead text-center mb-4 ringwars-section__subtitle">
-        Join us for the annual Muteki Kyokushin Ring Wars! An exciting full-contact tournament open to all ages and skill levels. Experience the spirit of Kyokushin in a supportive, competitive environment.
+      <p className="lead mb-4 ringwars-section__subtitle">
+      Ring Wars has become one of the country’s greatest sporting events. 
+      </p>
+      <p className="mb-4 ringwars-section__subtitle">
+      Every two years, many of the best fighters from Europe, Canada, South America and the United States go head-to-head in match play competition. Drama, tension, incredible fights, camaraderie and sportsmanship are served in equal measure, captivating an audience there to watch elite Kyokushin competitors. It’s an iconic event that transcends sport, yet remains true to the spirit of Kyokushin.
       </p>
       <div className="ringwars-section__details text-center mx-auto" style={{ maxWidth: 600 }}>
         <div className="alert alert-secondary">
-          <strong>Event details coming soon!</strong> Stay tuned for registration info, dates, and rules.
+          <strong>Ring Wars March 2025!</strong>
         </div>
       </div>
     </div>
