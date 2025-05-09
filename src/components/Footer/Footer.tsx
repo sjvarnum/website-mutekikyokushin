@@ -5,7 +5,7 @@ import { FaViber, FaWhatsapp } from "react-icons/fa6";
 import logoFooter from "../../assets/logo-footer.png";
 
 const Footer: React.FC = () => (
-  <footer className="footer bg-dark-red text-light py-4 mt-5 border-0">
+  <footer className="footer bg-dark-red text-light border-0">
     <div className="container">
       <div className="row align-items-center gy-4">
         {/* Logo */}
