@@ -19,7 +19,7 @@ const KidsProgram: React.FC = () => (
         {/* Right Column: Content */}
         <div className="col-lg-6 col-12">
           <h2 className="display-5 fw-bold mb-3">Kids Karate Program</h2>
-          <h3 className="h5 fw-normal mb-3 text-primary">Building Confidence, Respect, and Fun</h3>
+          <h3 className="h5 fw-normal mb-3 theme-text-red">Building Confidence, Respect, and Fun</h3>
           <p className="lead mb-3">
             Our Kids Karate Program is designed to help children develop focus, discipline, and self-esteem in a safe and supportive environment. Classes are fun and engaging, teaching valuable life skills while building physical fitness and coordination.
           </p>

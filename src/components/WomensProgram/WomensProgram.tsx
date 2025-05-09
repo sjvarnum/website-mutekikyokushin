@@ -19,7 +19,7 @@ const WomensProgram: React.FC = () => (
         {/* Left Column (desktop): Content */}
         <div className="col-lg-6 col-12 order-1 order-lg-2">
           <h2 className="display-5 fw-bold mb-3">Women's Karate Program</h2>
-          <h3 className="h5 fw-normal mb-3 text-primary">Empowering Women Through Martial Arts</h3>
+          <h3 className="h5 fw-normal mb-3 theme-text-red">Empowering Women Through Martial Arts</h3>
           <p className="lead mb-3">
             Our Women's Program is designed to empower women of all ages and backgrounds. Build strength, confidence, and self-defense skills in a supportive and motivating environment.
           </p>
