@@ -49,6 +49,7 @@ const Navigation: React.FC = () => (
           
           <li className="nav-item"><a className="nav-link" href="/#schedule">Schedule</a></li>
           <li className="nav-item"><a className="nav-link" href="/#contact">Contact</a></li>
+          <li className="nav-item"><a className="nav-link" href="/#location">Location</a></li>
         </ul>
       </div>
     </div>
