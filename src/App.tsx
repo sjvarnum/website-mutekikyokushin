@@ -11,6 +11,8 @@ import ContactForm from "./components/Contact/ContactForm";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import KaratePage from "./pages/KaratePage";
+import KidsKaratePage from "./pages/KidsKaratePage";
+import WomensKaratePage from "./pages/WomensKaratePage";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
           }
         />
         <Route path="/karate" element={<KaratePage />} />
+        <Route path="/kids-karate" element={<KidsKaratePage />} />
+        <Route path="/womens-karate" element={<WomensKaratePage />} />
       </Routes>
     </Router>
   );

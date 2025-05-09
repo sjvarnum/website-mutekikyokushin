@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import kidsImg from "../../assets/kids.jpg";
 
 const KidsProgram: React.FC = () => (
@@ -25,9 +26,9 @@ const KidsProgram: React.FC = () => (
           <p>
             Led by experienced instructors, our program encourages respect, teamwork, and perseverance—skills that benefit children both on and off the mat. All levels welcome!
           </p>
-          <a href="#contact" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
-            Learn More / Enroll
-          </a>
+          <Link to="/kids-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
+            Learn More / Join Us
+          </Link>
         </div>
       </div>
     </div>

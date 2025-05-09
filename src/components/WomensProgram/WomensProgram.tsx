@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import womenImg from "../../assets/women.jpg";
 
 const WomensProgram: React.FC = () => (
@@ -25,9 +26,9 @@ const WomensProgram: React.FC = () => (
           <p>
             Classes are led by experienced instructors who understand the unique goals and challenges women face. Join a community that celebrates achievement, fosters resilience, and encourages lifelong fitness.
           </p>
-          <a href="#contact" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
-            Learn More / Join Us  
-          </a>
+          <Link to="/womens-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
+            Learn More / Join Us
+          </Link>
         </div>
       </div>
     </div>
