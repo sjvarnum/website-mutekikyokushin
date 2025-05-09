@@ -66,7 +66,7 @@ const Schedule: React.FC = () => (
           </div>
         ))}
       </div>
-      <div className="text-muted small mt-4 text-center">
+      <div className="small mt-4 text-center theme-text-light">
         * Weekly Training Schedule Is Subject to Change. Please come to class on time and properly dressed.
       </div>
     </div>
