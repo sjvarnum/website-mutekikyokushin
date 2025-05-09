@@ -1,5 +1,29 @@
 /* src/index.css - Minimal Bootstrap-first global styles */
 
+/* Responsive Hero Section Adjustments */
+.hero-section {
+  min-height: 75vh;
+}
+.hero-image {
+  margin-top: 0;
+  max-height: 500px;
+}
+@media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 45vh;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .hero-image {
+    max-height: 260px;
+    margin-top: 1.25rem;
+  }
+  .navigation__logo img {
+    max-height: 60px !important;
+  }
+}
+
+
 body {
   margin: 0;
   min-width: 320px;
