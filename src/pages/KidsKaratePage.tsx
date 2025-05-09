@@ -1,6 +1,13 @@
 import React from "react";
 import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
+import kidsImg from "../assets/kids.jpg";
+import kidsImg2 from "../assets/kids-2.jpg";
+import kidsImg3 from "../assets/kids-3.jpg";
+import kidsImg4 from "../assets/kids-4.jpg";
+import kidsImg5 from "../assets/kids-5.jpg";
+
+
 
 const KidsKaratePage: React.FC = () => (
   <>
@@ -23,10 +30,14 @@ const KidsKaratePage: React.FC = () => (
             </ul>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            <div className="img-fluid rounded bg-secondary bg-opacity-10 kids-karate-hero__image d-flex align-items-center justify-content-center mx-auto mb-2 mb-lg-0" style={{width: '100%', maxWidth: 400, height: 300}}>
-              <span className="text-muted">[Kids Karate Hero Image]</span>
-            </div>
-          </div>
+          <img
+            src={kidsImg}
+            alt="Kids practicing karate at Muteki Kyokushin dojo"
+            className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+            style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
+        </div>
         </div>
       </div>
     </section>
@@ -40,10 +51,14 @@ const KidsKaratePage: React.FC = () => (
             <p className="mb-2">Karate classes are energetic, engaging, and packed with activities that keep kids moving and learning. Our curriculum emphasizes positive reinforcement and personal achievement.</p>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            <div className="img-fluid rounded bg-secondary bg-opacity-10 kids-karate-section__image d-flex align-items-center justify-content-center mx-auto mb-2 mb-lg-0" style={{width: '100%', maxWidth: 400, height: 220}}>
-              <span className="text-muted">[Section 1 Image]</span>
-            </div>
-          </div>
+          <img
+            src={kidsImg2}
+            alt="Kids practicing karate at Muteki Kyokushin dojo"
+            className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+            style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
+        </div>
         </div>
       </div>
     </section>
@@ -57,10 +72,14 @@ const KidsKaratePage: React.FC = () => (
             <p className="mb-2">Through karate, children learn respect, perseverance, and responsibility. These life skills extend beyond the dojo, helping them succeed at school and at home.</p>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            <div className="img-fluid rounded bg-secondary bg-opacity-10 kids-karate-section__image d-flex align-items-center justify-content-center mx-auto mb-2 mb-lg-0" style={{width: '100%', maxWidth: 400, height: 220}}>
-              <span className="text-muted">[Section 2 Image]</span>
-            </div>
-          </div>
+          <img
+            src={kidsImg3}
+            alt="Kids practicing karate at Muteki Kyokushin dojo"
+            className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+            style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
+        </div>
         </div>
       </div>
     </section>
@@ -74,10 +93,14 @@ const KidsKaratePage: React.FC = () => (
             <p className="mb-2">Our program builds strength, coordination, and flexibility. Safety is always a priority, with classes designed to be both challenging and appropriate for each age group.</p>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            <div className="img-fluid rounded bg-secondary bg-opacity-10 kids-karate-section__image d-flex align-items-center justify-content-center mx-auto mb-2 mb-lg-0" style={{width: '100%', maxWidth: 400, height: 220}}>
-              <span className="text-muted">[Section 3 Image]</span>
-            </div>
-          </div>
+          <img
+            src={kidsImg4}
+            alt="Kids practicing karate at Muteki Kyokushin dojo"
+            className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+            style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
+            loading="lazy"
+          />
+        </div>
         </div>
       </div>
     </section>
@@ -92,9 +115,13 @@ const KidsKaratePage: React.FC = () => (
             <a href="/#contact" className="btn btn-solid-blue btn-lg mt-3">Contact Us</a>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            <div className="img-fluid rounded bg-secondary bg-opacity-10 kids-karate-section__image d-flex align-items-center justify-content-center mx-auto mb-2 mb-lg-0" style={{width: '100%', maxWidth: 400, height: 220}}>
-              <span className="text-muted">[Section 4 Image]</span>
-            </div>
+            <img
+              src={kidsImg5}
+              alt="Kids practicing karate at Muteki Kyokushin dojo"
+              className="img-fluid rounded mb-4 mb-lg-0 kids-image"
+              style={{ width: "100%", height: "400px", maxWidth: 600, objectFit: "cover", margin: "0 auto" }}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
