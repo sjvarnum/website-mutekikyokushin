@@ -4,7 +4,7 @@ import logoNavigation from '../../assets/logo-navigation.png';
 import './Navigation.css';
 
 const Navigation: React.FC = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top navigation">
+  <nav className="navbar navbar-expand-lg navbar-light bg-white navigation">
     <div className="container">
       <a className="navbar-brand navigation__logo" href="/">
   <img src={logoNavigation} alt="Muteki Kyokushin Logo" className="img-fluid" style={{ maxHeight: 120 }} />

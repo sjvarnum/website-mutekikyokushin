@@ -14,10 +14,12 @@ import KaratePage from "./pages/KaratePage";
 import KidsKaratePage from "./pages/KidsKaratePage";
 import WomensKaratePage from "./pages/WomensKaratePage";
 import ScrollToAnchor from "./components/ScrollToAnchor";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <ScrollToAnchor />
       <Routes>
         <Route

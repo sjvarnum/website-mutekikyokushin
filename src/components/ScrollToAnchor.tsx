@@ -9,11 +9,19 @@ const ScrollToAnchor: React.FC = () => {
 
   useEffect(() => {
     if (hash) {
-      // Remove the '#' and try to scroll to the element
       const id = hash.replace("#", "");
       const el = document.getElementById(id);
       if (el) {
+        // Scroll to the element first (smooth)
         el.scrollIntoView({ behavior: "smooth" });
+        // After a short delay, offset for the sticky navbar
+        setTimeout(() => {
+          const navbar = document.querySelector(".navigation.sticky-top");
+          const navbarHeight = navbar ? (navbar as HTMLElement).offsetHeight : 0;
+          if (navbarHeight > 0) {
+            window.scrollBy({ top: -navbarHeight, left: 0, behavior: "instant" });
+          }
+        }, 400); // Delay matches smooth scroll duration
       }
     }
   }, [hash]);
