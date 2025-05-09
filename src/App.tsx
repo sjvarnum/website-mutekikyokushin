@@ -7,6 +7,7 @@ import NewsEvents from "./components/NewsEvents/NewsEvents";
 import RingWars from "./components/RingWars/RingWars";
 import KidsProgram from "./components/KidsProgram/KidsProgram";
 import WomensProgram from "./components/WomensProgram/WomensProgram";
+import Schedule from "./components/Schedule/Schedule";
 import ContactForm from "./components/Contact/ContactForm";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -35,6 +36,7 @@ function App() {
               <RingWars />
               <KidsProgram />
               <WomensProgram />
+              <Schedule />
               <ContactForm />
               <Footer />
             </>
