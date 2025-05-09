@@ -9,6 +9,14 @@
   max-height: 500px;
 }
 @media (max-width: 767.98px) {
+
+@media (min-width: 992px) {
+  .map-container {
+    min-height: 480px !important;
+    height: 100% !important;
+  }
+}
+
   .hero-section {
     min-height: 45vh;
     padding-top: 1.5rem;

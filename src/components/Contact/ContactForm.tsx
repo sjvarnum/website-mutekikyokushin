@@ -34,8 +34,9 @@ const ContactForm: React.FC = () => {
   return (
     <section className="contact-section bg-light py-5 border-bottom" id="contact">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-md-10 col-lg-8">
+        <div className="row g-4 justify-content-center align-items-stretch">
+          {/* Contact Form */}
+          <div className="col-12 col-lg-6 d-flex flex-column">
             <h2 className="display-5 fw-bold mb-3 text-center">Contact Us</h2>
             <p className="text-center mb-4">
               Have a question or want to get started? Fill out the form below and we’ll get back to you soon!
@@ -110,6 +111,24 @@ const ContactForm: React.FC = () => {
                 </button>
               </div>
             </form>
+          </div>
+          {/* Map Section */}
+          <div className="col-12 col-lg-6 d-flex flex-column justify-content-center" id="location">
+            <div
+              className="map-container w-100 h-100"
+              style={{ minHeight: 320, height: "320px", borderRadius: 8, overflow: "hidden" }}
+            >
+              <iframe
+                title="Muteki Kyokushin Dojo Location"
+                src="https://www.google.com/maps?q=Village+Gate+Square,+274+N+Goodman+St+Unit+D240,+Rochester,+NY+14607&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: 8, height: "100%", width: "100%" }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
