@@ -20,11 +20,11 @@ const RingWars: React.FC = () => (
       <p className="mb-4 ringwars-section__subtitle">
       Every two years, many of the best fighters from Europe, Canada, South America and the United States go head-to-head in match play competition. Drama, tension, incredible fights, camaraderie and sportsmanship are served in equal measure, captivating an audience there to watch elite Kyokushin competitors. It’s an iconic event that transcends sport, yet remains true to the spirit of Kyokushin.
       </p>
-      <div className="ringwars-section__details text-center mx-auto" style={{ maxWidth: 600 }}>
+      {/* <div className="ringwars-section__details text-center mx-auto" style={{ maxWidth: 600 }}>
         <div className="alert alert-secondary">
           <strong>Ring Wars March 2025!</strong>
         </div>
-      </div>
+      </div> */}
     </div>
   </section>
 );

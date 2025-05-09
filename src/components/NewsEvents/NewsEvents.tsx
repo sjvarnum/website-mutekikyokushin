@@ -175,11 +175,11 @@ const NewsEvents: React.FC = () => {
           ))}
         </div>
         {/* View All Button */}
-        <div className="text-center mt-4">
+        {/* <div className="text-center mt-4">
           <a href="#" className="btn btn-solid-blue btn-lg">
             View All News & Events
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
