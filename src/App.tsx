@@ -17,6 +17,10 @@ import KidsKaratePage from "./pages/KidsKaratePage";
 import WomensKaratePage from "./pages/WomensKaratePage";
 import ScrollToAnchor from "./components/ScrollToAnchor";
 import ScrollToTop from "./components/ScrollToTop";
+import ringwarsImg from "./assets/ringwars-2.jpg";
+import ringwarsImg2 from "./assets/ringwars-3.jpg";
+import ringwarsImg3 from "./assets/ringwars-4.jpg";
+import ringwarsImg4 from "./assets/ringwars-5.jpg";
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
                     id: 1,
                     title: "Ring Wars Tournament 2013",
                     description: "Join us for the annual Ring Wars tournament. Open to all ages and levels!",
-                    image: "/src/assets/ringwars-2.jpg",
+                    image: ringwarsImg,
                     link: "#",
                     // date: "2013-06-01"
                   },
@@ -49,7 +53,7 @@ function App() {
                     id: 2,
                     title: "Ring Wars Tournament 2013",
                     description: "Join us for the annual Ring Wars tournament. Open to all ages and levels!",
-                    image: "/src/assets/ringwars-3.jpg",
+                    image: ringwarsImg2,
                     link: "#",
                     // date: "2015-06-01"
                   },
@@ -57,7 +61,7 @@ function App() {
                     id: 3,
                     title: "Ring Wars Tournament 2015",
                     description: "Join us for the annual Ring Wars tournament. Open to all ages and levels!",
-                    image: "/src/assets/ringwars-4.jpg",
+                    image: ringwarsImg3,
                     link: "#",
                     // date: "2017-06-01"
                   },
@@ -65,7 +69,7 @@ function App() {
                     id: 4,
                     title: "Ring Wars Tournament 2020",
                     description: "Join us for the annual Ring Wars tournament. Open to all ages and levels!",
-                    image: "/src/assets/ringwars-5.jpg",
+                    image: ringwarsImg4,
                     link: "#",
                     // date: "2025-06-01"
                   }
