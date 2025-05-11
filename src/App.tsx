@@ -13,6 +13,7 @@ import ContactForm from "./components/Contact/ContactForm";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import KaratePage from "./pages/KaratePage";
+import AdultProgram from "./components/AdultProgram/AdultProgram";
 import KidsKaratePage from "./pages/KidsKaratePage";
 import WomensKaratePage from "./pages/WomensKaratePage";
 import ScrollToAnchor from "./components/ScrollToAnchor";
@@ -76,6 +77,7 @@ function App() {
                 ]}
               />
               <KidsProgram />
+              <AdultProgram />
               <WomensProgram />
               <Schedule />
               <ContactForm />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import womenImg from "../../assets/women.jpg";
 
 const WomensProgram: React.FC = () => (
-  <section id="adults" className="womens-program-section bg-white py-5 border-bottom">
+  <section id="womens" className="womens-program-section bg-white py-5 border-bottom">
     <div className="container">
       <div className="row align-items-center g-5 flex-lg-row-reverse flex-column">
         {/* Right Column (desktop): Image Placeholder */}

@@ -44,6 +44,7 @@ const Navigation: React.FC = () => (
   <ul className="dropdown-menu" aria-labelledby="programsDropdown">
     <li><a className="dropdown-item" href="/#kids">Kids Program</a></li>
     <li><a className="dropdown-item" href="/#adults">Adult Program</a></li>
+    <li><a className="dropdown-item" href="/#womens">Women's Program</a></li>
   </ul>
 </li>
           
