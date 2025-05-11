@@ -1,0 +1,30 @@
+.gallery-carousel__img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-carousel__img {
+  max-height: 320px;
+  object-fit: cover;
+  width: 100%;
+  border: 2px solid #dc3545; /* Bootstrap danger (red) */
+  background: #000;
+}
+
+.gallery-carousel__arrow:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (max-width: 991.98px) {
+  .gallery-carousel__img {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-carousel__img {
+    max-height: 180px;
+  }
+}

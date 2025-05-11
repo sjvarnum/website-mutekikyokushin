@@ -22,6 +22,7 @@ import ringwarsImg from "./assets/ringwars-2.jpg";
 import ringwarsImg2 from "./assets/ringwars-3.jpg";
 import ringwarsImg3 from "./assets/ringwars-4.jpg";
 import ringwarsImg4 from "./assets/ringwars-5.jpg";
+import GalleryCarousel from "./components/GallaryCarousel/GalleryCarousel";
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
               <KidsProgram />
               <AdultProgram />
               <WomensProgram />
+              <GalleryCarousel />
               <Schedule />
               <ContactForm />
               <Footer />
