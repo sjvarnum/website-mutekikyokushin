@@ -23,6 +23,7 @@ import ringwarsImg2 from "./assets/ringwars-3.jpg";
 import ringwarsImg3 from "./assets/ringwars-4.jpg";
 import ringwarsImg4 from "./assets/ringwars-5.jpg";
 import GalleryCarousel from "./components/GallaryCarousel/GalleryCarousel";
+import Instructor from "./components/Instuctor/Instructor";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
               <GoogleReviews />
               <CallToAction />
               <Karate />
+              <Instructor />
               {/* <NewsEvents /> */}
               <RingWars />
               <CarouselCards

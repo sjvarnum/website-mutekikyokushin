@@ -5,7 +5,7 @@ import karateImg from "../../assets/masutatsu-oyama.jpg";
 const Karate: React.FC = () => (
   <section id="karate" className="about-kyokushin-section bg-light py-5 border-bottom">
     <div className="container">
-      <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
+      <div className="row align-items-center g-5 flex-lg-row">
         {/* Left Column: Image Placeholder */}
         <div className="col-lg-6 col-12 text-center">
         <img
