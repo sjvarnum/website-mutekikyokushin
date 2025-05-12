@@ -56,6 +56,7 @@ const gridItems = [
   },
 ];
 
+const AUTO_ADVANCE_ENABLED = false; // Set to true to enable auto-advance
 const AUTO_ADVANCE_INTERVAL = 6000; // ms
 
 const NewsEvents: React.FC = () => {
@@ -63,8 +64,9 @@ const NewsEvents: React.FC = () => {
   // Use number for timeout ref in browser
   const timeoutRef = useRef<number | null>(null);
 
-  // Auto-advance carousel
+  // Auto-advance carousel (controlled by AUTO_ADVANCE_ENABLED flag)
   useEffect(() => {
+    if (!AUTO_ADVANCE_ENABLED) return;
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = window.setTimeout(() => {
       setCurrent((prev) => (prev + 1) % featuredItems.length);

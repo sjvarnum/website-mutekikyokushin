@@ -15,6 +15,8 @@ interface CarouselCardsProps {
   autoScrollInterval?: number; // ms
 }
 
+const AUTO_SCROLL_ENABLED = false; // Set to true to enable auto-scroll
+
 const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval = 5000 }) => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -31,8 +33,9 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Auto-scroll
+  // Auto-scroll (controlled by AUTO_SCROLL_ENABLED flag)
   useEffect(() => {
+    if (!AUTO_SCROLL_ENABLED) return;
     if (items.length <= cardsPerView) return;
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
