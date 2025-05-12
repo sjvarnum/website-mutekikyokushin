@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./CarouselCards.css";
 
 export interface CarouselCardItem {
   id: string | number;
@@ -24,6 +25,30 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval
   // Determine number of cards per view
   const [cardsPerView, setCardsPerView] = useState(1);
 
+  // Fade transition state and handler
+  const [isFading, setIsFading] = useState(false);
+  const [pendingIndex, setPendingIndex] = useState<number | null>(null);
+  const handleAdvance = (direction: 1 | -1) => {
+    setIsFading(true);
+    let newIdx = direction === 1
+      ? (index + cardsPerView) % items.length
+      : index - cardsPerView < 0
+        ? items.length - cardsPerView
+        : index - cardsPerView;
+    setPendingIndex(newIdx);
+  };
+
+  useEffect(() => {
+    if (isFading && pendingIndex !== null) {
+      const timeout = setTimeout(() => {
+        setIndex(pendingIndex);
+        setIsFading(false);
+        setPendingIndex(null);
+      }, 200);
+      return () => clearTimeout(timeout);
+    }
+  }, [isFading, pendingIndex]);
+
   useEffect(() => {
     const handleResize = () => {
       setCardsPerView(window.innerWidth >= 768 ? 2 : 1);
@@ -46,17 +71,8 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval
     };
   }, [items.length, cardsPerView, autoScrollInterval]);
 
-  const prev = () => {
-    setIndex((prevIdx) => {
-      let newIdx = prevIdx - cardsPerView;
-      if (newIdx < 0) newIdx = items.length - cardsPerView;
-      return newIdx;
-    });
-  };
-
-  const next = () => {
-    setIndex((prevIdx) => (prevIdx + cardsPerView) % items.length);
-  };
+  const prev = () => handleAdvance(-1);
+  const next = () => handleAdvance(1);
 
   // Get the cards to display
   const visibleCards = [];
@@ -79,35 +95,37 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval
           </button>
           <div className="col-12 col-md-10 col-lg-8 mx-auto">
             <div className="carousel-cards my-2">
-              <div className="row justify-content-center align-items-stretch g-3">
-                {visibleCards.map((item) => (
-                  <div className="col-12 col-md-6" key={item.id}>
-                    <div className="card h-100 shadow-sm">
-                      {item.image && (
-                        <img src={item.image} alt={item.title} className="card-img-top" style={{ objectFit: "cover", maxHeight: 400 }} />
-                      )}
-                      <div className="card-body d-flex flex-column">
-                        <h5 className="card-title fw-bold">{item.title}</h5>
-                        {item.date && <div className="small text-muted mb-2">{new Date(item.date).toLocaleDateString()}</div>}
-                        {/* <p className="card-text flex-grow-1">{item.description}</p> */}
-                        {/* {item.link && (
-                          <a href={item.link} className="btn btn-solid-blue btn-sm mt-2 align-self-start">
-                            Read More
-                          </a>
-                        )} */}
+              <div className={`row justify-content-center align-items-stretch g-3 carousel-cards__row${isFading ? ' carousel-cards__row--fade' : ''}`}>
+                <>
+                  {visibleCards.map((item) => (
+                    <div className="col-12 col-md-6" key={item.id}>
+                      <div className="card h-100 shadow-sm">
+                        {item.image && (
+                          <img src={item.image} alt={item.title} className="card-img-top" style={{ objectFit: "cover", maxHeight: 400 }} />
+                        )}
+                        <div className="card-body d-flex flex-column">
+                          <h5 className="card-title fw-bold">{item.title}</h5>
+                          {item.date && <div className="small text-muted mb-2">{new Date(item.date).toLocaleDateString()}</div>}
+                          {/* <p className="card-text flex-grow-1">{item.description}</p> */}
+                          {/* {item.link && (
+                            <a href={item.link} className="btn btn-solid-blue btn-sm mt-2 align-self-start">
+                              Read More
+                            </a>
+                          )} */}
+                        </div>
                       </div>
                     </div>
+                  ))}
+                  {/* Carousel controls: Desktop (arrows above, centered) */}
+                  <div className="d-flex justify-content-center align-items-center gap-3 mt-3 d-md-block d-none">
+                    <button className="btn btn-outline-blue" onClick={prev} aria-label="Previous">
+                      <FaChevronLeft />
+                    </button>
+                    <button className="btn btn-outline-blue" onClick={next} aria-label="Next">
+                      <FaChevronRight />
+                    </button>
                   </div>
-                ))}
-              </div>
-              {/* Carousel controls: Mobile (arrows below, centered) */}
-              <div className="d-flex justify-content-center align-items-center gap-3 mt-3 d-md-none">
-                <button className="btn btn-outline-blue" onClick={prev} aria-label="Previous">
-                  <FaChevronLeft />
-                </button>
-                <button className="btn btn-outline-blue" onClick={next} aria-label="Next">
-                  <FaChevronRight />
-                </button>
+                </>
               </div>
             </div>
           </div>
@@ -124,34 +142,37 @@ const CarouselCards: React.FC<CarouselCardsProps> = ({ items, autoScrollInterval
         <div className="d-block d-md-none">
           <div className="col-12 mx-auto">
             <div className="carousel-cards my-2">
-              <div className="row justify-content-center align-items-stretch g-3">
-                {visibleCards.map((item) => (
-                  <div className="col-12" key={item.id}>
-                    <div className="card h-100 shadow-sm">
-                      {item.image && (
-                        <img src={item.image} alt={item.title} className="card-img-top" style={{ objectFit: "cover", maxHeight: 400 }} />
-                      )}
-                      <div className="card-body d-flex flex-column">
-                        <h5 className="card-title fw-bold">{item.title}</h5>
-                        {item.date && <div className="small text-muted mb-2">{new Date(item.date).toLocaleDateString()}</div>}
-                        {/* <p className="card-text flex-grow-1">{item.description}</p> */}
-                        {/* {item.link && (
-                          <a href={item.link} className="btn btn-solid-blue btn-sm mt-2 align-self-start">
-                            Read More
-                          </a>
-                        )} */}
+              <div className={`row justify-content-center align-items-stretch g-3 carousel-cards__row${isFading ? ' carousel-cards__row--fade' : ''}`}>
+                <>
+                  {visibleCards.map((item) => (
+                    <div className="col-12" key={item.id}>
+                      <div className="card h-100 shadow-sm">
+                        {item.image && (
+                          <img src={item.image} alt={item.title} className="card-img-top" style={{ objectFit: "cover", maxHeight: 400 }} />
+                        )}
+                        <div className="card-body d-flex flex-column">
+                          <h5 className="card-title fw-bold">{item.title}</h5>
+                          {item.date && <div className="small text-muted mb-2">{new Date(item.date).toLocaleDateString()}</div>}
+                          {/* <p className="card-text flex-grow-1">{item.description}</p> */}
+                          {/* {item.link && (
+                            <a href={item.link} className="btn btn-solid-blue btn-sm mt-2 align-self-start">
+                              Read More
+                            </a>
+                          )} */}
+                        </div>
                       </div>
                     </div>
+                  ))}
+                  {/* Carousel controls: Mobile (arrows below, centered) */}
+                  <div className="d-flex justify-content-center align-items-center gap-3 mt-3 d-md-none">
+                    <button className="btn btn-outline-blue" onClick={prev} aria-label="Previous">
+                      <FaChevronLeft />
+                    </button>
+                    <button className="btn btn-outline-blue" onClick={next} aria-label="Next">
+                      <FaChevronRight />
+                    </button>
                   </div>
-                ))}
-              </div>
-              <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
-                <button className="btn btn-outline-blue" onClick={prev} aria-label="Previous">
-                  <FaChevronLeft />
-                </button>
-                <button className="btn btn-outline-blue" onClick={next} aria-label="Next">
-                  <FaChevronRight />
-                </button>
+                </>
               </div>
             </div>
           </div>

@@ -1,0 +1,7 @@
+.carousel-cards__row {
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+.carousel-cards__row--fade {
+  opacity: 0;
+}

@@ -35,3 +35,11 @@
     max-height: none;
   }
 }
+
+.gallery-carousel__img-row {
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+.gallery-carousel__img-row--fade {
+  opacity: 0;
+}

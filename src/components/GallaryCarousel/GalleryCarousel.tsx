@@ -33,6 +33,8 @@ const galleryImages = [
 
 const GalleryCarousel: React.FC = () => {
   const [startIdx, setStartIdx] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+  const [pendingIdx, setPendingIdx] = useState<number | null>(null);
 
   // Responsive: 4 desktop, 2 tablet, 1 mobile
   const getImagesPerView = () => {
@@ -55,12 +57,27 @@ const GalleryCarousel: React.FC = () => {
   const canGoBack = startIdx > 0;
   const canGoForward = endIdx < galleryImages.length;
 
-  const next = () => {
-    if (canGoForward) setStartIdx(startIdx + 1);
+  // Fade transition handlers
+  const handleAdvance = (direction: 1 | -1) => {
+    if ((direction === 1 && canGoForward) || (direction === -1 && canGoBack)) {
+      setIsFading(true);
+      setPendingIdx(startIdx + direction);
+    }
   };
-  const prev = () => {
-    if (canGoBack) setStartIdx(startIdx - 1);
-  };
+
+  React.useEffect(() => {
+    if (isFading && pendingIdx !== null) {
+      const timeout = setTimeout(() => {
+        setStartIdx(pendingIdx);
+        setIsFading(false);
+        setPendingIdx(null);
+      }, 200); // 200ms fade duration
+      return () => clearTimeout(timeout);
+    }
+  }, [isFading, pendingIdx]);
+
+  const next = () => handleAdvance(1);
+  const prev = () => handleAdvance(-1);
 
   return (
     <section className="gallery-carousel container py-5">
@@ -73,7 +90,7 @@ const GalleryCarousel: React.FC = () => {
         >
           &#8592;
         </button>
-        <div className="row flex-nowrap w-100 mx-2">
+        <div className={`row flex-nowrap w-100 mx-2 gallery-carousel__img-row${isFading ? ' gallery-carousel__img-row--fade' : ''}`}>
           {visibleImages.map((img, idx) => (
             <div
               className={`gallery-carousel__img-col col-12 col-md-6 col-lg-3 px-1`}
