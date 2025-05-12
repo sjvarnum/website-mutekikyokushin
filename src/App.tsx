@@ -79,8 +79,8 @@ function App() {
                   }
                 ]}
               />
-              <KidsProgram />
               <AdultProgram />
+              <KidsProgram />
               <WomensProgram />
               <GalleryCarousel />
               <Schedule />

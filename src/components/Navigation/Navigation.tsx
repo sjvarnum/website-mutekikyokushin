@@ -17,16 +17,15 @@ const Navigation: React.FC = () => (
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item"><a className="nav-link" href="/#karate">About</a></li>
           {/* <li className="nav-item"><a className="nav-link" href="#hero">Home</a></li> */}
-          {/* <li className="nav-item dropdown">
+          <li className="nav-item dropdown">
   <a className="nav-link dropdown-toggle" href="#about" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     About
   </a>
   <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
-    <li><a className="dropdown-item" href="#about">About</a></li>
-    <li><a className="dropdown-item" href="#karate">Karate</a></li>
-    <li><a className="dropdown-item" href="#dojo">Dojo</a></li>
+    <li><a className="dropdown-item" href="#karate">Kyokushin</a></li>
+    <li><a className="dropdown-item" href="#instructor">Instructor</a></li>
   </ul>
-</li> */}
+</li>
           <li className="nav-item dropdown">
   <a className="nav-link dropdown-toggle" href="/#news" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     News & Events
