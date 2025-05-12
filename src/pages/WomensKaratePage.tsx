@@ -35,19 +35,18 @@ const WomensKaratePage: React.FC = () => (
             </ul>
           </div>
           <div className="col-lg-6 col-12 text-center">
-            
-              <img
-                src={womenImg}
-                alt="Women practicing karate"
-                className="img-fluid rounded"
-                style={{
-                  width: "100%",
-                  height: "400px",
-                  maxWidth: 600,
-                  objectFit: "cover",
-                  margin: "0 auto",
-                }}
-              />
+            <img
+              src={womenImg}
+              alt="Women practicing karate"
+              className="img-fluid rounded"
+              style={{
+                width: "100%",
+                height: "400px",
+                maxWidth: 600,
+                objectFit: "cover",
+                margin: "0 auto",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -58,11 +57,21 @@ const WomensKaratePage: React.FC = () => (
       <div className="container">
         <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
           <div className="col-lg-6 col-12">
-            <h2 className="h3 theme-text-red mb-2">Why Women Choose Karate</h2>
+            <h2 className="h3 theme-text-red mb-2">
+              The Evolution of Women in Kyokushin
+            </h2>
             <p className="mb-2">
-              Karate offers a unique blend of physical fitness, mental
-              resilience, and self-defense skills. Our classes are designed to
-              be empowering, challenging, and fun.
+              Kyokushin karate has transformed dramatically over the past
+              decade. What was once a male-dominated martial art now proudly
+              showcases women competing at the highest levels in semi-contact
+              and knockdown kumite. This shift represents a remarkable evolution
+              - while the first World Open Championships in Japan featured no
+              women in kumite, today some of the world's most accomplished
+              Kyokushin athletes are women. Champions like Agnieska Sypien (IKO1
+              Poland), Alina Aldatova (IKO1 Russia), Julie Nadeau (IFK Canada),
+              and Monelle Richards (Royama Canada) have become inspirational
+              figures in the Kyokushin community, excelling not just in kumite
+              but also in tameshiwari (breaking) and kata (forms).
             </p>
           </div>
           <div className="col-lg-6 col-12 text-center">
@@ -91,12 +100,17 @@ const WomensKaratePage: React.FC = () => (
         <div className="row align-items-center g-5 flex-lg-row-reverse flex-column-reverse">
           <div className="col-lg-6 col-12">
             <h2 className="h3 theme-text-red mb-2">
-              Self-Defense & Confidence
+              Self-Defense with Purpose
             </h2>
             <p className="mb-2">
-              Learn practical self-defense techniques and build confidence in a
-              safe and encouraging environment. Our program is tailored to
-              empower women of all backgrounds.
+              In Rochester and surrounding areas, where safety concerns are
+              increasing, Kyokushin's full-contact approach provides women with
+              practical and effective self-defense skills. The techniques taught
+              in our dojo are designed for real-world application, giving women
+              the confidence to protect themselves in potentially dangerous
+              situations. Our training focuses on building both physical
+              capability and mental resilience - essential components of
+              effective self-defense.
             </p>
           </div>
           <div className="col-lg-6 col-12 text-center">
@@ -124,11 +138,15 @@ const WomensKaratePage: React.FC = () => (
       <div className="container">
         <div className="row align-items-center g-5 flex-lg-row flex-column-reverse">
           <div className="col-lg-6 col-12">
-            <h2 className="h3 theme-text-red mb-2">Fitness & Wellness</h2>
+            <h2 className="h3 theme-text-red mb-2">Fitness That Transforms</h2>
             <p className="mb-2">
-              Karate is a full-body workout that improves strength, flexibility,
-              and endurance. Our classes are designed to help you achieve your
-              fitness goals at any level.
+              Kyokushin offers a comprehensive full-body workout that improves
+              strength, flexibility, and endurance. Women training at our dojo
+              experience significant improvements in physical fitness, whether
+              their goals involve weight management, muscle toning, or overall
+              conditioning. The intensive nature of Kyokushin training delivers
+              results that many conventional fitness programs cannot match, all
+              while developing valuable martial arts skills.
             </p>
           </div>
           <div className="col-lg-6 col-12 text-center">
@@ -156,13 +174,16 @@ const WomensKaratePage: React.FC = () => (
       <div className="container">
         <div className="row align-items-center g-5 flex-lg-row-reverse flex-column-reverse">
           <div className="col-lg-6 col-12">
-            <h2 className="h3 theme-text-red mb-2">
-              Join Our Women's Karate Community
-            </h2>
+            <h2 className="h3 theme-text-red mb-2">A Community of Strength</h2>
             <p className="mb-2">
-              Experience camaraderie, support, and personal growth. Our dojo is
-              a space where women encourage each other and celebrate every
-              achievement. Try a free class today!
+              At our dojo, women train at every level from white belt beginners
+              to accomplished black belts. Some focus on competition, while
+              others pursue personal fitness and self-improvement without ever
+              entering the ring. This diversity creates a supportive community
+              where women can define their own martial arts journey. Whether
+              you're interested in becoming a knockdown champion or simply want
+              to maintain a healthy lifestyle, our inclusive training
+              environment welcomes you.
             </p>
             <a href="/#contact" className="btn btn-solid-blue btn-lg mt-3">
               Contact Us
