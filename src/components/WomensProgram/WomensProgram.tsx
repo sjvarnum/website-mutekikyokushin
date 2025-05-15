@@ -25,7 +25,7 @@ const WomensProgram: React.FC = () => (
             Classes are led by experienced instructors who understand the unique goals and challenges women face. Join a community that celebrates achievement, fosters resilience, and encourages lifelong fitness.
           </p>
           <Link to="/womens-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
-            Learn More / Join Us
+            Read More
           </Link>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import instructorImg from "../../assets/instructor.jpg";
 
 const Instructor: React.FC = () => (
@@ -45,6 +46,18 @@ const Instructor: React.FC = () => (
             }}
             loading="lazy"
           />
+        </div>
+      </div>
+      {/* Read more button */}
+      <div className="row">
+        <div className="col-12 text-start mt-3">
+          <Link
+            to="/instructor"
+            className="btn theme-bg-blue theme-text-white px-4 py-2 instructor-section__read-more"
+            aria-label="Read more about Shihan Rene Cruz"
+          >
+            Read more
+          </Link>
         </div>
       </div>
     </div>

@@ -25,7 +25,7 @@ const AdultProgram: React.FC = () => (
             Classes focus on practical self-defense, fitness, and personal growth. Train alongside other motivated adults in a positive, respectful environment—no prior experience required. Our instructors encourage mutual respect, perseverance, and lifelong learning.
           </p>
           <Link to="/adult-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
-            Learn More / Join Us
+            Read More
           </Link>
         </div>
       </div>

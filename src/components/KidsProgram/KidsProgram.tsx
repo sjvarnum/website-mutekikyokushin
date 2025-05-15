@@ -16,7 +16,7 @@ const KidsProgram: React.FC = () => (
             Led by experienced instructors, our program encourages respect, teamwork, and perseverance—skills that benefit children both on and off the mat. All levels welcome!
           </p>
           <Link to="/kids-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
-            Learn More / Join Us
+            Read More
           </Link>
         </div>
         <div className="col-lg-6 col-12 text-center">
