@@ -59,13 +59,13 @@ const GoogleReviews: React.FC = () => {
   const isNextDisabled = currentIndex + visibleCount >= reviews.length;
 
   return (
-    <section className="bg-light py-4 border-bottom">
+    <section className="theme-bg-red text-light py-4 border-bottom">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3 className="mb-0 fw-bold">What Our Students Say</h3>
           <div>
             <button
-              className="btn btn-outline-secondary btn-sm me-2"
+              className="btn btn-outline-light btn-sm me-2"
               onClick={handlePrev}
               disabled={isPrevDisabled}
               aria-label="Previous reviews"
@@ -73,7 +73,7 @@ const GoogleReviews: React.FC = () => {
               &#8592;
             </button>
             <button
-              className="btn btn-outline-secondary btn-sm"
+              className="btn btn-outline-light btn-sm"
               onClick={handleNext}
               disabled={isNextDisabled}
               aria-label="Next reviews"
@@ -97,7 +97,7 @@ const GoogleReviews: React.FC = () => {
                     ))}
                   </div>
                   <p className="card-text flex-grow-1">"{review.text}"</p>
-                  <div className="fw-semibold text-primary">- {review.author}</div>
+                  <div className="fw-semibold theme-text-blue">- {review.author}</div>
                 </div>
               </div>
             </div>
