@@ -1,31 +1,46 @@
 import React, { useState, useEffect } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaArrowRight, FaStar } from "react-icons/fa";
 
 // Sample reviews data
 const reviews = [
   {
-    author: "Jane D.",
-    text: "Fantastic dojo! The instructors are knowledgeable and welcoming. My kids love it here!",
+    author: "Wesley W.",
+    text: "Fantastic Dojo. René Cruz is a shihan with a lot of knowledge. An amazing place to train and the tournaments they organize are out of this world 💪🏼🔥",
     rating: 5,
   },
   {
-    author: "Mike S.",
-    text: "Great community and top-notch Kyokushin training. Highly recommend for all ages.",
+    author: "Noelia G.",
+    text: "This is an amazing place to learn karate! My son and I attend and it has been an excellent and wonderful experience.",
     rating: 5,
   },
   {
     author: "Lisa T.",
-    text: "Supportive environment and excellent teaching. I've grown so much in skill and confidence.",
+    text: "I went to my first class two weeks ago and I recommend it! From young ages to older, this gym will make you sweat!",
     rating: 5,
   },
   {
-    author: "Chris P.",
-    text: "Clean facility, friendly people, and real results. The best martial arts school in the area!",
+    author: "Nik O.",
+    text: "We had a session there and I really enjoyed it as well as the dojo. Had I lived in Rochester, I would have trained there regularly.",
     rating: 5,
   },
   {
-    author: "Ava K.",
-    text: "My whole family trains here. The sense of community is amazing!",
+    author: "Khalie P.",
+    text: "Amazing place to learn karate, the sensei shows a lot of discipline, good place for starters. Goes by all ages, very clean.",
+    rating: 5,
+  },
+  {
+    author: "Frenchi W.",
+    text: "Been going here for a while, a very well rounded fitness program 3 days a week at a good price. The focused and dedicated instructors really make you feel attended to and accomplished.",
+    rating: 5,
+  },
+  {
+    author: "Ferry W.",
+    text: "Amazing place to learn karate, the sensei shows a lot of discipline, good place for starters. Goes by all ages, very clean.",
+    rating: 5,
+  },
+  {
+    author: "Johnny G.",
+    text: "My son has been going here three years and has enjoyed the wonderful atmosphere also he loves the feel of being a part of a family...",
     rating: 5,
   },
 ];
@@ -103,8 +118,20 @@ const GoogleReviews: React.FC = () => {
             </div>
           ))}
         </div>
+      {/* See more reviews button */}
+      <div className="mt-4 text-start">
+        <a
+          href="https://g.co/kgs/MAathv5"
+          className="btn theme-bg-blue text-light px-4 py-2"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="See more reviews on Google"
+        >
+          See more Google reviews <FaArrowRight />
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
