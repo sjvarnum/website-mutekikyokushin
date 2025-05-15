@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import adultsImg from "../../assets/adults.jpg";
 
 const AdultProgram: React.FC = () => (
@@ -24,9 +24,9 @@ const AdultProgram: React.FC = () => (
           <p>
             Classes focus on practical self-defense, fitness, and personal growth. Train alongside other motivated adults in a positive, respectful environment—no prior experience required. Our instructors encourage mutual respect, perseverance, and lifelong learning.
           </p>
-          <Link to="/adult-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
+          {/* <Link to="/adult-karate" className="btn theme-bg-blue btn-lg mt-2 shadow text-light">
             Read More
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
