@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const validate = () => {
@@ -16,7 +16,9 @@ const ContactForm: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
+    if (errors[e.target.name]) {
+      setErrors(prev => ({ ...prev, [e.target.name]: "" }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,9 +28,24 @@ const ContactForm: React.FC = () => {
       setErrors(validationErrors);
       return;
     }
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", email: "", phone: "", message: "" });
+    
+    setStatus("submitting");
+    
+    const formElement = e.target as HTMLFormElement;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(formElement) as any).toString(),
+    })
+      .then(() => {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      })
+      .catch(() => {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      });
   };
 
   return (
@@ -39,14 +56,32 @@ const ContactForm: React.FC = () => {
           <div className="col-12 col-lg-6 d-flex flex-column">
             <h2 className="display-5 fw-bold mb-3 text-center">Contact Us</h2>
             <p className="text-center mb-4">
-              Have a question or want to get started? Fill out the form below and we’ll get back to you soon!
+              Have a question or want to get started? Fill out the form below and we'll get back to you soon!
             </p>
-            {submitted && (
+            
+            {status === "success" && (
               <div className="alert alert-success text-center" role="alert">
-                Thank you! Your message has been sent.
+                Thank you! Your message has been sent successfully.
               </div>
             )}
-            <form className="p-4 bg-white rounded shadow-sm" onSubmit={handleSubmit} noValidate>
+            {status === "error" && (
+              <div className="alert alert-danger text-center" role="alert">
+                There was an error sending your message. Please try again later.
+              </div>
+            )}
+
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="p-4 bg-white rounded shadow-sm" 
+              noValidate
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+              
               <div className="mb-3">
                 <label htmlFor="name" className="form-label fw-semibold">
                   Name <span className="text-danger">*</span>
@@ -59,6 +94,7 @@ const ContactForm: React.FC = () => {
                   value={form.name}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
                 {errors.name && <div className="invalid-feedback">{errors.name}</div>}
               </div>
@@ -74,6 +110,7 @@ const ContactForm: React.FC = () => {
                   value={form.email}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
                 {errors.email && <div className="invalid-feedback">{errors.email}</div>}
               </div>
@@ -88,6 +125,7 @@ const ContactForm: React.FC = () => {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
+                  disabled={status === "submitting"}
                 />
               </div>
               <div className="mb-3">
@@ -102,12 +140,17 @@ const ContactForm: React.FC = () => {
                   value={form.message}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
                 {errors.message && <div className="invalid-feedback">{errors.message}</div>}
               </div>
               <div className="d-grid">
-                <button type="submit" className="btn theme-bg-blue btn-lg text-light">
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="btn theme-bg-blue btn-lg text-light"
+                  disabled={status === "submitting"}
+                >
+                  {status === "submitting" ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
