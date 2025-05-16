@@ -32,17 +32,23 @@ const ContactForm: React.FC = () => {
     setStatus("submitting");
     
     const formElement = e.target as HTMLFormElement;
+    const formData = new FormData(formElement);
+    
+    // Add form name for Netlify
+    formData.append('form-name', 'contact');
+    
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(formElement) as any).toString(),
+      body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => {
         setStatus("success");
         setForm({ name: "", email: "", phone: "", message: "" });
         setTimeout(() => setStatus("idle"), 5000);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error('Form submission error:', error);
         setStatus("error");
         setTimeout(() => setStatus("idle"), 5000);
       });

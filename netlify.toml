@@ -1,4 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  framework = "vite"
+  targetPort = 5173
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Handle form submissions
+[[redirects]]
+  from = "/.netlify/forms/submit"
+  to = "/.netlify/functions/submission-created"
+  status = 200
+  force = true
