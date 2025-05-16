@@ -16,12 +16,12 @@ const Hero: React.FC = () => (
             Traditional Values. Modern Training.
           </h2>
           <p className="lead mb-4">
-            At Muteki <Link to="/karate">Kyokushin</Link>, we practice karate as
+            At Muteki <Link to="/karate">Kyokushin</Link>, we train karate as
             it was meant to be—challenging, transformative, and deeply
             rewarding. From beginners to advanced practitioners, our dojo brings
             together people of all ages and backgrounds, helping each person
-            discover their own unbreakable spirit. Ready for the challenge?
-            Visit our dojo this week for a free orientation.
+            discover their own unbreakable spirit so they can be the best version of themselves. Ready for the challenge?
+            Visit our dojo for a free class.
           </p>
           <a
             href="#contact"
