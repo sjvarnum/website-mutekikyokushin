@@ -100,7 +100,7 @@ const InstructorPage: React.FC = () => (
             <p>
               Whether it's national or international competition, our students
               either place in each division or win the entire division in all
-              events entered, therefore improving our student's self esteem.
+              events entered.
             </p>
 
             <h3 className="h4 theme-text-blue mb-3">Global Connections</h3>

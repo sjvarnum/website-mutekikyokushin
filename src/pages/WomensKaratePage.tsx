@@ -182,7 +182,7 @@ const WomensKaratePage: React.FC = () => (
               entering the ring. This diversity creates a supportive community
               where women can define their own martial arts journey. Whether
               you're interested in becoming a knockdown champion or simply want
-              to maintain a healthy lifestyle, our inclusive training
+              to maintain a healthy lifestyle, our extensive training
               environment welcomes you.
             </p>
             <a href="/#contact" className="btn btn-solid-blue btn-lg mt-3">
